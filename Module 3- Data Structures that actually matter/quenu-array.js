@@ -1,3 +1,5 @@
+// quenu  like fifo. its do, array and linklist.
+//  Enquenu and dequenu
 // LiFO  type means stack
 
 // ⚙️ Basic Operations
@@ -9,45 +11,38 @@
 // Peek → Look at the top item without removing it
 // isEmpty → Check if the stack is empty
 
-class Stack {
+class Queue {
   constructor() {
     this.items = [];
   }
 
-  push(value) {
+  enqueue(value) {
     this.items.push(value);
   }
-  pop() {
+  dequeue() {
     if (this.isEmpty()) {
       return undefined;
     }
-    return this.items.pop();
+    return this.items.shift();
   }
   peak() {
     if (this.isEmpty()) {
       return undefined;
     }
-    return this.items[this.items.length - 1];
+    return this.items[0];
   }
   isEmpty() {
     return this.items.length === 0;
   }
   print() {
-    console.log(this.items.slice().reverse().join(" -> "));
+    console.log("Start ->", this.items.join(" -> "), "-> end");
   }
   //slice cannot muted its
 }
-const stack = new Stack();
-console.log(stack.peak());
-console.log(stack.isEmpty());
-// console.log(stack.isEmpty());
-// console.log(object);
+const queue = new Queue();
 
-stack.push(12);
-stack.push(20);
-stack.push(25);
-
-stack.print();
-
-console.log(stack.peak());
-console.log(stack.pop());
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(20);
+console.log(queue.peak());
+queue.print();
