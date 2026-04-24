@@ -1,4 +1,4 @@
-// quenu  like fifo. its do, array and linklist.
+// queue  like fifo. its do, array and linklist.
 //  Enquenu and dequenu
 // LiFO  type means stack
 
