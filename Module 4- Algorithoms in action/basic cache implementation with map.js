@@ -11,6 +11,7 @@ const expensiveTask = (id) => {
 const getData = (id) => {
   if (dataCache.has(id)) {
     console.log("cache hit for id: ", id);
+    // console.log(dataCache);
     return dataCache.get(id);
   }
   //   return expensiveTask(id);
